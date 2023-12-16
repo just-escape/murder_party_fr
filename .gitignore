@@ -1,0 +1,5 @@
+*.pyc
+murder_party_fr/settings.py
+*/__pycache__/*
+db.sqlite3
+.idea
