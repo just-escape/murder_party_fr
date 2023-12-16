@@ -1,0 +1,24 @@
+:root {
+    --mpfr-dark: #3c3c3e;
+    --mpfr-deepdark: #2e2e2f;
+    --mpfr-light: #f8f9fa;
+}
+
+body {
+    min-height: 100%;
+}
+
+.deepdark {
+    background-color: var(--mpfr-deepdark);
+    color: var(--mpfr-light);
+}
+
+.dark {
+    background-color: var(--mpfr-dark);
+    color: var(--mpfr-light);
+}
+
+.light {
+    background-color: var(--mpfr-light);
+    color: var(--mpfr-dark);
+}
