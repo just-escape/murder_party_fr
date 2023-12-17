@@ -16,6 +16,126 @@
 
 {% block content %}
 
-Hey
+<div class="jumbotron dark py-5">
+    <div class="container">
+        <h1>Trouvez la meilleure murder party en France</h1>
+        <p>Qui convienne à votre besoin</p>
+
+        <form class="d-flex">
+            <input class="form-control" type="text" placeholder="Ville, Région, Thème, Scénario..." aria-label="search">
+            <button class="btn btn-primary ms-2" type="submit">Rechercher</button>
+        </form>
+    </div>
+</div>
+
+<div class="jumbotron light py-5">
+    <div class="container">
+        <h2>Rechercher par ville</h2>
+        <ol class="list-unstyled d-flex">
+            <li class="me-3">
+                <a href="/murder-party-paris" class="btn btn-info">Paris</a>
+            </li>
+            <li class="me-3">
+                <a href="/murder-party-lille" class="btn btn-info">Lille</a>
+            </li>
+            <li class="me-3">
+                <div disabled class="btn btn-info">...</div>
+            </li>
+            <li>
+                <a href="/murder-party-villes-france" class="btn btn-success">Toutes les villes</a>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="jumbotron dark py-5">
+    <div class="container">
+        <h2>Qu'est-ce qu'une murder party ?</h2>
+        <div class="row flex-column flex-lg-row">
+            <div class="col">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3>Magnifique</h3>
+                    </div>
+                    <div class="card-body">
+                        {% lorem 1 %}
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3>Prodigieux</h3>
+                    </div>
+                    <div class="card-body">
+                        {% lorem 1 %}
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3>Légendaire</h3>
+                    </div>
+                    <div class="card-body">
+                        {% lorem 1 %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <a href="/qu-est-ce-qu-une-murder-party">En savoir plus sur les murder party</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron light py-5">
+    <div class="container">
+        <h2>Pourquoi organiser une murder party ?</h2>
+        <div class="row flex-column flex-lg-row">
+            <div class="col">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3>En Team Building</h3>
+                    </div>
+                    <div class="card-body">
+                        {% lorem 1 %}
+                    </div>
+                    <div class="card-footer">
+                        <a href="/murder-party-team-building">En savoir plus sur organiser une murder party Team Building</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3>Entre amis ou en famille</h3>
+                    </div>
+                    <div class="card-body">
+                        {% lorem 1 %}
+                    </div>
+                    <div class="card-footer">
+                        <a href="/murder-party-amis-famille">En savoir plus sur organiser une murder party entre amis ou en famille</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3>Comment organiser une murder party soi-même ?</h3>
+                    </div>
+                    <div class="card-body">
+                        {% lorem 1 %}
+                    </div>
+                    <div class="card-footer">
+                        <a href="/comment-organiser-une-murder-party">En savoir plus sur organiser une murder party soi-même</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

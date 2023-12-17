@@ -21,6 +21,15 @@ from murder import views
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('murder-party-liste-france', views.search, name='search'),
+    path('murder-party-team-building', views.teambuilding, name='teambuilding'),
+    path('murder-party-amis-famille', views.friends, name='friends'),
+    path('comment-organiser-une-murder-party', views.how_to, name='how_to'),
+    path('qu-est-ce-qu-une-murder-party', views.what, name='what'),
+    path('murder-party-blog', views.blog, name='blog'),
+    path('murder-party-paris', views.murder_party_paris, name='murder-party-paris'),
+    path('murder-party-lille', views.murder_party_lille, name='murder-party-lille'),
+    path('murder-party-villes-france', views.murder_party_france, name='murder-party-france'),
     path('admin/', admin.site.urls),
 ]
 
