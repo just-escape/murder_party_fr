@@ -31,3 +31,11 @@ body {
 .dark a:hover {
     color: var(--mpfr-light);
 }
+
+a.text-dark {
+    color: var(--mpfr-dark)
+}
+
+a.text-dark:hover {
+    color: var(--mpfr-dark)
+}
