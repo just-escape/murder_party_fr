@@ -5,10 +5,6 @@ def home(request):
     return render(request, 'home.html')
 
 
-def search(request):
-    return render(request, 'search.html')
-
-
 def teambuilding(request):
     return render(request, 'teambuilding.html')
 
@@ -39,3 +35,7 @@ def murder_party_lille(request):
 
 def murder_party_france(request):
     return render(request, 'murder_party_france.html')
+
+
+def scenario_page(request):
+    return render(request, 'scenario_page.html')

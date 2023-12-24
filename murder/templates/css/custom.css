@@ -22,3 +22,12 @@ body {
     background-color: var(--mpfr-light);
     color: var(--mpfr-dark);
 }
+
+.dark a {
+    color: var(--mpfr-light);
+    text-decoration: none;
+}
+
+.dark a:hover {
+    color: var(--mpfr-light);
+}
