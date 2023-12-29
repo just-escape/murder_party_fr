@@ -14,11 +14,57 @@
 
 {% block main_header %}{% endblock %}
 
+{% block extra_js %}
+<script src="/static/js/om-javascript-range-slider.js"></script>
+{% endblock %}
+
 {% block content %}
 
 <div class="jumbotron dark py-5">
     <div class="container">
-        <h1>Toutes les Murder Party en France</h1>
+        <h1 class="mb-4">Toutes les Murder Party en France</h1>
+
+        <form class="d-flex mb-5" method="post">
+            {% csrf_token %}
+
+            <div class="me-3">
+                <label for="name" class="form-label">Nom du scénario</label>
+                <input class="form-control" type="text" placeholder="Le Redrock Saloon" id="name" name="name" value="{{ search_form.name.value }}">
+            </div>
+            <div class="me-3">
+                <label for="city" class="form-label">Ville</label>
+                <select id="city" class="form-select" name="city">
+                  <option value selected>Ville</option>
+                  {% for city in cities %}
+                  <option value="{{ city.name }}" {% if search_form.city.value == city.name %}selected{% endif %}>{{ city.name }}</option>
+                  {% endfor %}
+                </select>
+            </div>
+            <div class="me-3">
+                <label for="theme" class="form-label">Thème</label>
+                <select id="theme" class="form-select" name="theme">
+                  <option value selected>Thème</option>
+                  {% for theme in themes %}
+                  <option value="{{ theme.name }}" {% if search_form.theme.value == theme.name %}selected{% endif %}>{{ theme.name }}</option>
+                  {% endfor %}
+                </select>
+            </div>
+            <div class="d-flex flex-column justify-content-between me-3" style="min-width: 150px">
+                <label for="players" class="form-label">Joueurs</label>
+                <input class="justify-content-center" type="range" id="players" name="players" multiple value="20" min="7" max="200" unit=""/>
+            </div>
+            <div class="d-flex flex-column justify-content-between me-3" style="min-width: 150px">
+                <label for="duration" class="form-label">Durée</label>
+                <input class="justify-content-center" type="range" id="duration" name="duration" multiple value="120" min="60" max="180" unit=" min"/>
+            </div>
+            <div class="d-flex flex-column justify-content-between me-3" style="min-width: 150px">
+                <label for="price" class="form-label">Prix (estimation)</label>
+                <input class="justify-content-center" type="range" id="price" name="price" multiple value="25" min="10" max="100" unit="€"/>
+            </div>
+            <div class="d-flex flex-column justify-content-end">
+                <button class="btn btn-primary" type="submit">Rechercher</button>
+            </div>
+        </form>
 
         <ul class="list-group list-unstyled list-group-flush">
             {% for scenario in scenarios %}
@@ -28,4 +74,12 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block post_base_js %}
+<script type="application/javascript">
+OmRangeSlider.init({
+  inputValueStyle: OmRangeSliderInputValueStyles.DEFAULT_COMMA_SEPARATED
+});
+</script>
 {% endblock %}
