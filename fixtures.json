@@ -30,6 +30,13 @@
   }
 },
 {
+  "model": "murder.theme",
+  "pk": 2,
+  "fields": {
+    "name": "Policier"
+  }
+},
+{
   "model": "murder.scenario",
   "pk": 1,
   "fields": {
@@ -39,7 +46,7 @@
     "players_min": 7,
     "players_max": 25,
     "price": 35,
-    "duration": 60,
+    "duration": 120,
     "theme": 1,
     "thumbnail": "scenario/murder-party-375.webp",
     "picture": "scenario/murder-party.webp",
