@@ -109,7 +109,13 @@ STATIC_ROOT = '/PATH/TO/static/'
 
 STATICFILES_DIRS = (STATIC_ROOT,)
 
+MEDIA_URL = "media/"
+
+MEDIA_ROOT = "/PATH/TO/media/"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+handler404 = 'murder.views.custom_404'

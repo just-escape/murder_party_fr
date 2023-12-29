@@ -19,7 +19,7 @@
 <div class="jumbotron dark py-5">
     <div class="container">
         <h1>Trouvez la meilleure murder party en France</h1>
-        <p>Qui convienne à votre besoin</p>
+        <p>Qui vous convienne</p>
 
         <!--<form class="d-flex">
             <input class="form-control" type="text" placeholder="Ville, Région, Thème, Scénario..." aria-label="search">
@@ -28,18 +28,14 @@
 
         <h2>Rechercher par ville</h2>
         <ol class="list-unstyled d-flex">
+            {% for city in cities %}
             <li class="me-3">
-                <a href="/murder-party-paris" class="btn btn-info">Paris</a>
+                <a href="/murder-party-ville/{{ city.slug }}" class="btn btn-info">{{ city.name }}</a>
             </li>
-            <li class="me-3">
-                <a href="/murder-party-lille" class="btn btn-info">Lille</a>
-            </li>
-            <li class="me-3">
-                <div disabled class="btn btn-info">...</div>
-            </li>
-            <li>
+            {% endfor %}
+            <!--<li>
                 <a href="/murder-party-villes-france" class="btn btn-success">Toutes les villes</a>
-            </li>
+            </li>-->
         </ol>
     </div>
 </div>

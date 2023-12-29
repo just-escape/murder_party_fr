@@ -14,9 +14,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.contrib import admin
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls.static import static
+
 from murder import views
 
 urlpatterns = [
@@ -26,12 +29,11 @@ urlpatterns = [
     path('comment-organiser-une-murder-party', views.how_to, name='how_to'),
     path('qu-est-ce-qu-une-murder-party', views.what, name='what'),
     path('murder-party-blog', views.blog, name='blog'),
-    path('murder-party-paris', views.murder_party_paris, name='murder-party-paris'),
-    path('murder-party-lille', views.murder_party_lille, name='murder-party-lille'),
+    path('murder-party-ville/<str:city_slug>', views.murder_party_ville, name='murder-party-ville'),
     path('murder-party-villes-france', views.murder_party_france, name='murder-party-france'),
-    path('murder-party/redrock-saloon', views.scenario_page, name='scenario_page'),
-    path('murder-party/sherlock-party', views.scenario_page, name='scenario_page'),
+    path('murder-party-scenario/<str:scenario_slug>', views.murder_party_scenario, name='murder_party_scenario'),
     path('admin/', admin.site.urls),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

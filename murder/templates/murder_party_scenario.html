@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block microdata %}itemscope itemtype="https://schema.org/FAQPage" {% endblock %}
+
+{% block title %}Liste Murder Party{% endblock %}
+{% block description %}Liste Murder Party Description{% endblock %}
+
+{% block og_title %}Liste Murder Party{% endblock %}
+{% block og_description %}Liste Murder Party Og description{% endblock %}
+
+{% block pre_content %}{% endblock %}
+
+{% block main_header %}{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron dark py-5">
+    <div class="container">
+        <h1>{{ scenario.name }}</h1>
+        <div class="d-flex flex-row justify-content-between">
+            <div class="d-flex flex-column">
+                <div class="d-flex flex-row mb-2">
+                    <div class="badge bg-info me-2">{{ scenario.players_min }} à {{ scenario.players_max }} joueurs</div>
+                    <div class="badge bg-info me-2">{{ scenario.duration }} minutes</div>
+                    <div class="badge bg-info me-2">~{{ scenario.price }}€</div>
+                    <div class="badge bg-info me-2">{{ scenario.theme.name }}</div>
+                </div>
+                <div class="d-flex flex-row">
+                    {% for city in scenario.cities.all %}
+                    <div class="badge bg-light text-dark me-2">{{ city.name }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div>
+                <a href="{{ scenario.booking_link }}" class="btn btn-info mb-2">Réserver</a>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6">
+                <img class="img-fluid w-100 mb-3" src="{{ scenario.picture.url }}" alt="Poster de la murder party {{ scenario.name }}" type="image/webp">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron light py-5">
+    <div class="container">
+        <p>{{ scenario.description_long | safe }}</p>
+    </div>
+</div>
+
+{% endblock %}

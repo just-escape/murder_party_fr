@@ -1,0 +1,73 @@
+[
+{
+  "model": "murder.city",
+  "pk": 1,
+  "fields": {
+    "slug": "lille",
+    "name": "Lille"
+  }
+},
+{
+  "model": "murder.city",
+  "pk": 2,
+  "fields": {
+    "slug": "paris",
+    "name": "Paris"
+  }
+},
+{
+  "model": "murder.organization",
+  "pk": 1,
+  "fields": {
+    "name": "Just Escape"
+  }
+},
+{
+  "model": "murder.theme",
+  "pk": 1,
+  "fields": {
+    "name": "Western"
+  }
+},
+{
+  "model": "murder.scenario",
+  "pk": 1,
+  "fields": {
+    "name": "Le Redrock Saloon",
+    "slug": "le-redrock-saloon",
+    "organization": 1,
+    "players_min": 7,
+    "players_max": 25,
+    "price": 35,
+    "duration": 60,
+    "theme": 1,
+    "thumbnail": "scenario/murder-party-375.webp",
+    "picture": "scenario/murder-party.webp",
+    "description_short": "Le Redrock Saloon vous ouvre ses portes.",
+    "description_long": "<h2>Un western comme à la télé</h2>\r\n\r\nLe Redrock Saloon vous ouvre ses portes.",
+    "booking_link": "https://just-escape.fr/murder-party-redrock-saloon",
+    "cities": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$HZDM2tVBzf0sbZBjHTMk2n$VSdjfcbX5xAbeiyADgeJ5Ztm5JB8eQMJ/KQOFTmABTw=",
+    "last_login": "2023-12-29T14:53:33.799Z",
+    "is_superuser": true,
+    "username": "jbb",
+    "first_name": "",
+    "last_name": "",
+    "email": "jbaptiste.braun@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-12-29T14:53:18.009Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
