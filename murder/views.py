@@ -20,8 +20,8 @@ def friends(request):
     return render(request, 'friends.html')
 
 
-def how_to(request):
-    return render(request, 'how_to.html')
+def how_to_organize_myself(request):
+    return render(request, 'how_to_organize_myself.html')
 
 
 def what(request):
@@ -169,3 +169,15 @@ def murder_party_scenario(request, scenario_slug: str):
 
 def custom_404(request, exception):
     return render(request, '404.html', status=404)
+
+
+def contact(request):
+    return render(request, 'contact.html')
+
+
+def who_are_we(request):
+    return render(request, 'qui_sommes_nous.html')
+
+
+def how_to_reference(request):
+    return render(request, 'comment_referencer_ma_murder_party.html')

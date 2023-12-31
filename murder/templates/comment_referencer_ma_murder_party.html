@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block microdata %}itemscope itemtype="https://schema.org/FAQPage" {% endblock %}
+
+{% block title %}Liste Murder Party{% endblock %}
+{% block description %}Liste Murder Party Description{% endblock %}
+
+{% block og_title %}Liste Murder Party{% endblock %}
+{% block og_description %}Liste Murder Party Og description{% endblock %}
+
+{% block pre_content %}{% endblock %}
+
+{% block main_header %}{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron dark py-5">
+    <div class="container">
+        <h1>Comment référencer ma Murder Party ?</h1>
+        <p>Notre objectif est de référencer le plus de Murder Party possible.</p>
+        <p class="mb-2">Si votre Murder Party est absente de la liste, envoyez un mail à contact@justescape.fr avec les informations suivantes :</p>
+        <ul>
+            <li>Nom de la société</li>
+            <li>Nom du scénario</li>
+            <li>Ville(s)</li>
+            <li>Nombre de joueurs minimum</li>
+            <li>Nombre de joueurs maximum</li>
+            <li>Thème</li>
+            <li>Prix maximal par joueur</li>
+            <li>Durée</li>
+            <li>Une image miniature au format png</li>
+            <li>Une image poster au format png</li>
+            <li>Une description courte en texte non-formatté</li>
+            <li>Une description longue au format html</li>
+            <li>Un lien de redirection vers votre site</li>
+        </ul>
+        <p>Nous nous efforcerons d'intégrer votre scénario et de vous répondre le plus tôt possible.</p>
+        <p>Note : Ce site a pour vocation d'être consulté par une audience francophone et plus précisément vivant en France métropolitaine.</p>
+    </div>
+</div>
+
+{% endblock %}

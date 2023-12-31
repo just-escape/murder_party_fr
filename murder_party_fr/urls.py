@@ -26,12 +26,15 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('murder-party-team-building', views.teambuilding, name='teambuilding'),
     path('murder-party-amis-famille', views.friends, name='friends'),
-    path('comment-organiser-une-murder-party', views.how_to, name='how_to'),
+    path('comment-organiser-une-murder-party-soi-meme', views.how_to_organize_myself, name='how_to_organize_myself'),
     path('qu-est-ce-qu-une-murder-party', views.what, name='what'),
     path('murder-party-blog', views.blog, name='blog'),
     path('murder-party-ville/<str:city_slug>', views.murder_party_ville, name='murder-party-ville'),
     path('murder-party-villes-france', views.murder_party_france, name='murder-party-france'),
     path('murder-party-scenario/<str:scenario_slug>', views.murder_party_scenario, name='murder_party_scenario'),
+    path('contact', views.contact, name='contact'),
+    path('qui-sommes-nous', views.who_are_we, name='who_are_we'),
+    path('comment-referencer-ma-murder-party', views.how_to_reference, name='how_to_reference'),
     path('admin/', admin.site.urls),
 ]
 
