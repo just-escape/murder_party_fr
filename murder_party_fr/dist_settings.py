@@ -50,6 +50,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS = ["https://murder.just-escape.fr"]
+
 ROOT_URLCONF = 'murder_party_fr.urls'
 
 TEMPLATES = [
